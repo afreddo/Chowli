@@ -10,12 +10,12 @@ import MapKit
 
 struct Location: Codable {
     
+    let address: String
     let name: String
-    let lat: Int
-    let long: Int
+    let lat: Double
+    let long: Double
     let comments: String
     let rating: Int
     let type: String
-    let source: UUID
     
 }

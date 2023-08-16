@@ -12,6 +12,7 @@ struct LocationEditorSheet: View {
     @Environment(\.dismiss) var dismiss
     @Environment(\.managedObjectContext) var moc
     @EnvironmentObject private var user: User
+    
     @State private var address = ""
     @State private var convertedAddress: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 0.0, longitude: 0.0)
     @State private var name = ""

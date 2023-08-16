@@ -8,6 +8,11 @@
 import SwiftUI
 
 struct RestaurantDetailView: View {
+    @Environment(\.managedObjectContext) var moc
+    @Environment(\.dismiss) var dismiss
+    
+    @State private var showDeleteConfirmation = false
+    
     var restaurant: CachedLocation
     
     var body: some View {
@@ -48,9 +53,31 @@ struct RestaurantDetailView: View {
                         .padding()
                 }
             }
+            .toolbar {
+                ToolbarItem {
+                    Image(systemName: "trash.circle.fill")
+                        .onTapGesture {
+                            showDeleteConfirmation.toggle()
+                        }
+                }
+            }
+            .alert("Are you sure you want to delete \(restaurant.wrappedName)?", isPresented: $showDeleteConfirmation) {
+                Button("Confirm", role: .destructive) {
+                    removeRestaurant(restaurant)
+                    dismiss()
+                }
+                Button("Cancel", role: .cancel) { }
+            }
             .navigationTitle("\(restaurant.wrappedName): \(restaurant.wrappedType)")
             .navigationBarTitleDisplayMode(.inline)
+            
         }
+    }
+    
+    func removeRestaurant(_ restaurant: CachedLocation) {
+        moc.delete(restaurant)
+        
+        try? moc.save()
     }
     
     var image: String {

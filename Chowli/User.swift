@@ -11,11 +11,11 @@ import SwiftUI
 import MapKit
 
 @MainActor class User: ObservableObject {
-    @FetchRequest(sortDescriptors: []) var locations: FetchedResults<CachedLocation>
     
     let geoCoder = CLGeocoder()
     let dataManager = DataManager()
     @Published var profile: Profile
+    @FetchRequest(sortDescriptors: []) var locations: FetchedResults<CachedLocation>
     
     var locationsVisited: Int {
          return locations.count
@@ -30,8 +30,6 @@ import MapKit
         profile.changeName(name)
         saveProfile()
     }
-    
-    
     
     func saveProfile() {
         dataManager.saveProfile(profile)

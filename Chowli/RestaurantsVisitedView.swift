@@ -7,30 +7,83 @@
 
 import SwiftUI
 
+
+
 struct RestaurantsVisitedView: View {
     @Environment(\.managedObjectContext) var moc
     @EnvironmentObject private var user: User
     @FetchRequest(sortDescriptors: []) var locations: FetchedResults<CachedLocation>
     
+    @State private var filterType = "All"
+    @State private var searchText = ""
+    @State private var showFilterSelector = false
+    
+    var types = ["All", "American", "Mexican", "Barbecue", "Chinese", "Thai", "Indian", "Brunch", "Steakhouse", "Italian", "Sushi", "Pizza", "Seafood", "Japanese", "French", "Other"]
+    
     var body: some View {
-        List {
-            ForEach(locations) { location in
-                HStack {
-                    VStack {
-                        Text(location.wrappedName)
-                            .font(.headline)
-                        Text(location.wrappedType)
-                            .foregroundColor(.secondary)
+        
+        NavigationView {
+            
+            VStack {
+                ZStack {
+                    Rectangle()
+                        .frame(width: 300, height: 40)
+                        .foregroundColor(.blue)
+                        .clipShape(Capsule())
+                    
+                    Picker("Filter by cuisine", selection: $filterType) {
+                        ForEach(types, id: \.self) {
+                            Text($0)
+                        }
                     }
+                    .pickerStyle(.navigationLink)
+                    .frame(width: 250)
+                    .foregroundColor(.primary)
+                    .font(.headline)
+                }
+                .padding(10)
+                
+                
+                List {
+                    ForEach(locations) { location in
+                        NavigationLink {
+                            RestaurantDetailView(restaurant: location)
+                        } label: {
+                            HStack {
+                                VStack {
+                                    Text(location.wrappedName)
+                                        .font(.headline)
+                                    Text(location.wrappedType)
+                                        .foregroundColor(.secondary)
+                                }
+                                
+                                Spacer()
+                                
+                                RatingView(rating: .constant(Int(location.rating)))
+                                    .font(.title3)
+                            }
+                        }
+                    }
+                    .onDelete(perform: removeRestaurant)
+                }
+                .searchable(text: $searchText, prompt: "Search for a restaurant")
+                .onChange(of: [searchText, filterType]) { _ in
                     
-                    Spacer()
+                    let p1 = NSPredicate(format: "name CONTAINS %@", searchText)
+                    let p2 = NSPredicate(format: "type CONTAINS %@", filterType)
                     
-                    RatingView(rating: .constant(Int(location.rating)))
-                        .font(.title3)
+                    if searchText.isEmpty && filterType == "All" {
+                        locations.nsPredicate = nil
+                    } else if searchText.isEmpty {
+                        locations.nsPredicate = p2
+                    } else if filterType == "All" {
+                        locations.nsPredicate = p1
+                    } else {
+                        let newPredicate = NSCompoundPredicate(andPredicateWithSubpredicates: [p1, p2])
+                        locations.nsPredicate = newPredicate
+                    }
                 }
             }
-            .onDelete(perform: removeRestaurant)
-            
         }
     }
     
