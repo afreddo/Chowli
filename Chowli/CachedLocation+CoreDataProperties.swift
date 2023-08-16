@@ -15,7 +15,8 @@ extension CachedLocation {
     @nonobjc public class func fetchRequest() -> NSFetchRequest<CachedLocation> {
         return NSFetchRequest<CachedLocation>(entityName: "CachedLocation")
     }
-
+    
+    @NSManaged public var address: String?
     @NSManaged public var name: String?
     @NSManaged public var lat: Double
     @NSManaged public var long: Double
@@ -24,12 +25,16 @@ extension CachedLocation {
     @NSManaged public var type: String?
     @NSManaged public var source: UUID?
     
+    var wrappedAddress: String {
+        address ?? ""
+    }
+    
     var wrappedName: String {
         name ?? ""
     }
     
     var wrappedComments: String {
-        comments ?? ""
+        comments ?? "No comments"
     }
     
     var wrappedType: String {

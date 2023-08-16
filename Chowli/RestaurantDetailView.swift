@@ -12,21 +12,44 @@ struct RestaurantDetailView: View {
     
     var body: some View {
         NavigationView {
-            VStack {
-                ZStack (alignment: .bottomTrailing) {
-                    Image(image)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(maxWidth: .infinity)
+            ScrollView {
+                VStack {
                     
-                    Text(author)
-                        .foregroundColor(.white)
-                        .background(Color.secondary)
-                        .opacity(0.8)
-                        .offset(x: -30, y: -5)
+                    Text(restaurant.wrappedAddress)
+                        .font(.title3)
+                        .foregroundColor(.secondary)
+                        .contextMenu {
+                            Button {
+                                let pasteboard = UIPasteboard.general
+                                pasteboard.string = restaurant.wrappedAddress
+                            } label: {
+                                Label("Copy to clipboard", systemImage: "doc.on.doc")
+                            }
+                        }
+                    
+                    ZStack (alignment: .bottomTrailing) {
+                        Image(image)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(maxWidth: .infinity)
+                        
+                        Text("Credit: \(author)")
+                            .foregroundColor(.white)
+                            .padding(5)
+                            .background(Color.secondary.opacity(0.8))
+                            .clipShape(Capsule())
+                            .offset(x: -30, y: -5)
+                    }
+                    
+                    RatingView(rating: .constant(Int(restaurant.rating)))
+                        .font(.largeTitle)
+                    
+                    Text(restaurant.wrappedComments)
+                        .padding()
                 }
             }
-            .navigationTitle(restaurant.wrappedName)
+            .navigationTitle("\(restaurant.wrappedName): \(restaurant.wrappedType)")
+            .navigationBarTitleDisplayMode(.inline)
         }
     }
     

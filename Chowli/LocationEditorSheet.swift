@@ -43,18 +43,15 @@ struct LocationEditorSheet: View {
                 convertAddress()
             }
             Section {
+                TextEditor(text: $comments)
                 RatingView(rating: $rating)
-                TextField("Comments", text: $comments)
-                Button("tester") {
-                    print("lat \(convertedAddress.latitude) long \(convertedAddress.longitude)")
-                    print("Address \(address)")
-                    
-                }
+            } header: {
+                Text("Write a Review")
             }
             
             Section {
                 Button("Submit") {
-                    addLocation(name: name, lat: convertedAddress.latitude, long: convertedAddress.longitude, rating: rating, type: type)
+                    addLocation(name: name, lat: convertedAddress.latitude, long: convertedAddress.longitude, comments: comments, rating: rating, type: type, address: address)
                     
                     dismiss()
                 }
@@ -78,7 +75,7 @@ struct LocationEditorSheet: View {
         }
     }
     
-    func addLocation(name: String, lat: Double, long: Double, comments: String = "", rating: Int = 3, type: String) {
+    func addLocation(name: String, lat: Double, long: Double, comments: String = "", rating: Int = 3, type: String, address: String) {
 
         let cachedLocation = CachedLocation(context: moc)
         cachedLocation.name = name
@@ -87,6 +84,7 @@ struct LocationEditorSheet: View {
         cachedLocation.comments = comments
         cachedLocation.rating = Int16(rating)
         cachedLocation.type = type
+        cachedLocation.address = address
         
         try? moc.save()
     }

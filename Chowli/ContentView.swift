@@ -33,6 +33,7 @@ struct ContentView: View {
                         .scaledToFit()
                         .foregroundColor(.secondary)
                         .frame(maxWidth: 50)
+                        .shadow(radius: 1)
                         .offset(x: -20, y: -20)
                         .onTapGesture {
                             showingLocationEditorSheet.toggle()
@@ -65,7 +66,6 @@ struct ContentView: View {
                         } label: {
                             Image(systemName: "person.circle")
                         }
-                        
                     }
                 }
             }
@@ -78,6 +78,7 @@ struct ContentView: View {
             }
             .sheet(isPresented: $showingLocationEditorSheet) {
                 LocationEditorSheet()
+                    .presentationDetents([.medium])
             }
             .navigationTitle("Chowli")
             .navigationBarTitleDisplayMode(.inline)
