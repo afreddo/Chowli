@@ -43,10 +43,12 @@ struct ContentView: View {
                     .tabItem {
                         Label("My map", systemImage: "map.circle")
                     }
-                Text("New Locations from Google API")
+                
+                MapSearchView()
                     .tabItem {
                         Label("Location Finder", systemImage: "magnifyingglass.circle")
                     }
+                
                 RestaurantsVisitedView()
                     .tabItem {
                         Label("My Locations", systemImage: "list.bullet.circle")

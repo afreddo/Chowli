@@ -22,11 +22,16 @@
 		531F864F2A8C3256006ACEF5 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531F864E2A8C3256006ACEF5 /* ProfileView.swift */; };
 		531F86512A8C340C006ACEF5 /* ProfileStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531F86502A8C340C006ACEF5 /* ProfileStatsView.swift */; };
 		531F86552A8C3923006ACEF5 /* UserMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531F86542A8C3923006ACEF5 /* UserMapView.swift */; };
-		531F86572A8C3F4C006ACEF5 /* LocationFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531F86562A8C3F4C006ACEF5 /* LocationFetcher.swift */; };
 		531F86592A8C64AB006ACEF5 /* LocationEditorSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531F86582A8C64AB006ACEF5 /* LocationEditorSheet.swift */; };
 		531F865B2A8C666B006ACEF5 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531F865A2A8C666B006ACEF5 /* RatingView.swift */; };
 		531F865F2A8C7627006ACEF5 /* RestaurantsVisitedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531F865E2A8C7627006ACEF5 /* RestaurantsVisitedView.swift */; };
 		531F86612A8C83E1006ACEF5 /* RestaurantDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531F86602A8C83E1006ACEF5 /* RestaurantDetailView.swift */; };
+		531F86652A8DA1AB006ACEF5 /* MapSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531F86642A8DA1AB006ACEF5 /* MapSearchView.swift */; };
+		531F866F2A8DB795006ACEF5 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531F866E2A8DB795006ACEF5 /* LocationManager.swift */; };
+		531F86712A8DB917006ACEF5 /* MKCoordinateRegion-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531F86702A8DB917006ACEF5 /* MKCoordinateRegion-Extension.swift */; };
+		531F86732A8DBB5F006ACEF5 /* LocalSearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531F86722A8DBB5F006ACEF5 /* LocalSearchService.swift */; };
+		531F86752A8DBCF7006ACEF5 /* Landmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531F86742A8DBCF7006ACEF5 /* Landmark.swift */; };
+		531F86792A8DC25C006ACEF5 /* LandmarkListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531F86782A8DC25C006ACEF5 /* LandmarkListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,11 +51,16 @@
 		531F864E2A8C3256006ACEF5 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		531F86502A8C340C006ACEF5 /* ProfileStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileStatsView.swift; sourceTree = "<group>"; };
 		531F86542A8C3923006ACEF5 /* UserMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMapView.swift; sourceTree = "<group>"; };
-		531F86562A8C3F4C006ACEF5 /* LocationFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationFetcher.swift; sourceTree = "<group>"; };
 		531F86582A8C64AB006ACEF5 /* LocationEditorSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationEditorSheet.swift; sourceTree = "<group>"; };
 		531F865A2A8C666B006ACEF5 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		531F865E2A8C7627006ACEF5 /* RestaurantsVisitedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsVisitedView.swift; sourceTree = "<group>"; };
 		531F86602A8C83E1006ACEF5 /* RestaurantDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailView.swift; sourceTree = "<group>"; };
+		531F86642A8DA1AB006ACEF5 /* MapSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSearchView.swift; sourceTree = "<group>"; };
+		531F866E2A8DB795006ACEF5 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		531F86702A8DB917006ACEF5 /* MKCoordinateRegion-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKCoordinateRegion-Extension.swift"; sourceTree = "<group>"; };
+		531F86722A8DBB5F006ACEF5 /* LocalSearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalSearchService.swift; sourceTree = "<group>"; };
+		531F86742A8DBCF7006ACEF5 /* Landmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Landmark.swift; sourceTree = "<group>"; };
+		531F86782A8DC25C006ACEF5 /* LandmarkListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,23 +93,28 @@
 		531F861A2A8C0414006ACEF5 /* Chowli */ = {
 			isa = PBXGroup;
 			children = (
-				531F86562A8C3F4C006ACEF5 /* LocationFetcher.swift */,
-				531F86502A8C340C006ACEF5 /* ProfileStatsView.swift */,
-				531F86442A8C20C8006ACEF5 /* CachedLocation+CoreDataClass.swift */,
-				531F86452A8C20C8006ACEF5 /* CachedLocation+CoreDataProperties.swift */,
 				531F861B2A8C0414006ACEF5 /* ChowliApp.swift */,
-				531F863E2A8C0C93006ACEF5 /* User.swift */,
-				531F864C2A8C2685006ACEF5 /* Profile.swift */,
-				531F86482A8C221B006ACEF5 /* DataManager.swift */,
-				531F86402A8C0CC7006ACEF5 /* Location.swift */,
-				531F863C2A8C0BB4006ACEF5 /* DataController.swift */,
 				531F861D2A8C0414006ACEF5 /* ContentView.swift */,
+				531F86542A8C3923006ACEF5 /* UserMapView.swift */,
+				531F86642A8DA1AB006ACEF5 /* MapSearchView.swift */,
 				531F865E2A8C7627006ACEF5 /* RestaurantsVisitedView.swift */,
 				531F86582A8C64AB006ACEF5 /* LocationEditorSheet.swift */,
-				531F865A2A8C666B006ACEF5 /* RatingView.swift */,
-				531F86542A8C3923006ACEF5 /* UserMapView.swift */,
 				531F86602A8C83E1006ACEF5 /* RestaurantDetailView.swift */,
 				531F864E2A8C3256006ACEF5 /* ProfileView.swift */,
+				531F865A2A8C666B006ACEF5 /* RatingView.swift */,
+				531F86502A8C340C006ACEF5 /* ProfileStatsView.swift */,
+				531F86782A8DC25C006ACEF5 /* LandmarkListView.swift */,
+				531F863E2A8C0C93006ACEF5 /* User.swift */,
+				531F864C2A8C2685006ACEF5 /* Profile.swift */,
+				531F86402A8C0CC7006ACEF5 /* Location.swift */,
+				531F86482A8C221B006ACEF5 /* DataManager.swift */,
+				531F863C2A8C0BB4006ACEF5 /* DataController.swift */,
+				531F866E2A8DB795006ACEF5 /* LocationManager.swift */,
+				531F86722A8DBB5F006ACEF5 /* LocalSearchService.swift */,
+				531F86742A8DBCF7006ACEF5 /* Landmark.swift */,
+				531F86702A8DB917006ACEF5 /* MKCoordinateRegion-Extension.swift */,
+				531F86442A8C20C8006ACEF5 /* CachedLocation+CoreDataClass.swift */,
+				531F86452A8C20C8006ACEF5 /* CachedLocation+CoreDataProperties.swift */,
 				531F86292A8C0823006ACEF5 /* Chowli.xcdatamodeld */,
 				531F861F2A8C0415006ACEF5 /* Assets.xcassets */,
 				531F86212A8C0415006ACEF5 /* Preview Content */,
@@ -186,22 +201,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				531F861E2A8C0414006ACEF5 /* ContentView.swift in Sources */,
+				531F86752A8DBCF7006ACEF5 /* Landmark.swift in Sources */,
 				531F864D2A8C2685006ACEF5 /* Profile.swift in Sources */,
 				531F86412A8C0CC7006ACEF5 /* Location.swift in Sources */,
 				531F86552A8C3923006ACEF5 /* UserMapView.swift in Sources */,
+				531F86732A8DBB5F006ACEF5 /* LocalSearchService.swift in Sources */,
+				531F86792A8DC25C006ACEF5 /* LandmarkListView.swift in Sources */,
 				531F86592A8C64AB006ACEF5 /* LocationEditorSheet.swift in Sources */,
+				531F86652A8DA1AB006ACEF5 /* MapSearchView.swift in Sources */,
 				531F861C2A8C0414006ACEF5 /* ChowliApp.swift in Sources */,
 				531F86512A8C340C006ACEF5 /* ProfileStatsView.swift in Sources */,
 				531F863F2A8C0C93006ACEF5 /* User.swift in Sources */,
 				531F863D2A8C0BB4006ACEF5 /* DataController.swift in Sources */,
 				531F862B2A8C0823006ACEF5 /* Chowli.xcdatamodeld in Sources */,
+				531F86712A8DB917006ACEF5 /* MKCoordinateRegion-Extension.swift in Sources */,
 				531F865F2A8C7627006ACEF5 /* RestaurantsVisitedView.swift in Sources */,
 				531F86472A8C20C8006ACEF5 /* CachedLocation+CoreDataProperties.swift in Sources */,
 				531F865B2A8C666B006ACEF5 /* RatingView.swift in Sources */,
-				531F86572A8C3F4C006ACEF5 /* LocationFetcher.swift in Sources */,
 				531F86612A8C83E1006ACEF5 /* RestaurantDetailView.swift in Sources */,
 				531F86492A8C221B006ACEF5 /* DataManager.swift in Sources */,
 				531F864F2A8C3256006ACEF5 /* ProfileView.swift in Sources */,
+				531F866F2A8DB795006ACEF5 /* LocationManager.swift in Sources */,
 				531F86462A8C20C8006ACEF5 /* CachedLocation+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -334,7 +354,8 @@
 				DEVELOPMENT_TEAM = DBYWJ3A7P9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your location to center your map";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "This app requires your location to find nearby restaurants";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app requires your location to find nearby restaurants";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -364,7 +385,8 @@
 				DEVELOPMENT_TEAM = DBYWJ3A7P9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your location to center your map";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "This app requires your location to find nearby restaurants";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app requires your location to find nearby restaurants";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
