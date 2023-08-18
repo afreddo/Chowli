@@ -93,29 +93,12 @@
 		531F861A2A8C0414006ACEF5 /* Chowli */ = {
 			isa = PBXGroup;
 			children = (
+				531F867C2A8FCA1F006ACEF5 /* Model */,
+				531F867B2A8FC9FC006ACEF5 /* View */,
+				531F867F2A8FCAF1006ACEF5 /* Extensions */,
+				531F867E2A8FCAD9006ACEF5 /* CoreData */,
+				531F867D2A8FCA6C006ACEF5 /* Managers */,
 				531F861B2A8C0414006ACEF5 /* ChowliApp.swift */,
-				531F861D2A8C0414006ACEF5 /* ContentView.swift */,
-				531F86542A8C3923006ACEF5 /* UserMapView.swift */,
-				531F86642A8DA1AB006ACEF5 /* MapSearchView.swift */,
-				531F865E2A8C7627006ACEF5 /* RestaurantsVisitedView.swift */,
-				531F86582A8C64AB006ACEF5 /* LocationEditorSheet.swift */,
-				531F86602A8C83E1006ACEF5 /* RestaurantDetailView.swift */,
-				531F864E2A8C3256006ACEF5 /* ProfileView.swift */,
-				531F865A2A8C666B006ACEF5 /* RatingView.swift */,
-				531F86502A8C340C006ACEF5 /* ProfileStatsView.swift */,
-				531F86782A8DC25C006ACEF5 /* LandmarkListView.swift */,
-				531F863E2A8C0C93006ACEF5 /* User.swift */,
-				531F864C2A8C2685006ACEF5 /* Profile.swift */,
-				531F86402A8C0CC7006ACEF5 /* Location.swift */,
-				531F86482A8C221B006ACEF5 /* DataManager.swift */,
-				531F863C2A8C0BB4006ACEF5 /* DataController.swift */,
-				531F866E2A8DB795006ACEF5 /* LocationManager.swift */,
-				531F86722A8DBB5F006ACEF5 /* LocalSearchService.swift */,
-				531F86742A8DBCF7006ACEF5 /* Landmark.swift */,
-				531F86702A8DB917006ACEF5 /* MKCoordinateRegion-Extension.swift */,
-				531F86442A8C20C8006ACEF5 /* CachedLocation+CoreDataClass.swift */,
-				531F86452A8C20C8006ACEF5 /* CachedLocation+CoreDataProperties.swift */,
-				531F86292A8C0823006ACEF5 /* Chowli.xcdatamodeld */,
 				531F861F2A8C0415006ACEF5 /* Assets.xcassets */,
 				531F86212A8C0415006ACEF5 /* Preview Content */,
 			);
@@ -128,6 +111,63 @@
 				531F86222A8C0415006ACEF5 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		531F867B2A8FC9FC006ACEF5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				531F861D2A8C0414006ACEF5 /* ContentView.swift */,
+				531F86542A8C3923006ACEF5 /* UserMapView.swift */,
+				531F86642A8DA1AB006ACEF5 /* MapSearchView.swift */,
+				531F865E2A8C7627006ACEF5 /* RestaurantsVisitedView.swift */,
+				531F86582A8C64AB006ACEF5 /* LocationEditorSheet.swift */,
+				531F86602A8C83E1006ACEF5 /* RestaurantDetailView.swift */,
+				531F864E2A8C3256006ACEF5 /* ProfileView.swift */,
+				531F865A2A8C666B006ACEF5 /* RatingView.swift */,
+				531F86502A8C340C006ACEF5 /* ProfileStatsView.swift */,
+				531F86782A8DC25C006ACEF5 /* LandmarkListView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		531F867C2A8FCA1F006ACEF5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				531F863E2A8C0C93006ACEF5 /* User.swift */,
+				531F864C2A8C2685006ACEF5 /* Profile.swift */,
+				531F86402A8C0CC7006ACEF5 /* Location.swift */,
+				531F86742A8DBCF7006ACEF5 /* Landmark.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		531F867D2A8FCA6C006ACEF5 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				531F86722A8DBB5F006ACEF5 /* LocalSearchService.swift */,
+				531F86482A8C221B006ACEF5 /* DataManager.swift */,
+				531F866E2A8DB795006ACEF5 /* LocationManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		531F867E2A8FCAD9006ACEF5 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				531F863C2A8C0BB4006ACEF5 /* DataController.swift */,
+				531F86442A8C20C8006ACEF5 /* CachedLocation+CoreDataClass.swift */,
+				531F86452A8C20C8006ACEF5 /* CachedLocation+CoreDataProperties.swift */,
+				531F86292A8C0823006ACEF5 /* Chowli.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		531F867F2A8FCAF1006ACEF5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				531F86702A8DB917006ACEF5 /* MKCoordinateRegion-Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
