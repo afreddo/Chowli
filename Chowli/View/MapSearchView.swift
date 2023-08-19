@@ -50,7 +50,7 @@ struct MapSearchView: View {
             LandmarkSheetView()
                 .presentationDetents([.fraction(0.33)])
                 .presentationBackgroundInteraction(
-                    .enabled(upThrough: .medium)
+                    .enabled(upThrough: .large)
                 )
         }
         
