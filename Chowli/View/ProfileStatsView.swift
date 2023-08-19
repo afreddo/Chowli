@@ -9,13 +9,14 @@ import SwiftUI
 
 struct ProfileStatsView: View {
     @EnvironmentObject private var user: User
+    @FetchRequest(sortDescriptors: []) var locations: FetchedResults<CachedLocation>
         
     var body: some View {
         Group {
             VStack {
                 Text("Location Visited")
                     .font(.caption.bold())
-                Text("\(user.getLocationsCount())")
+                Text("\(locations.count)")
                     .font(.title3)
             }
             

@@ -32,6 +32,7 @@
 		531F86732A8DBB5F006ACEF5 /* LocalSearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531F86722A8DBB5F006ACEF5 /* LocalSearchService.swift */; };
 		531F86752A8DBCF7006ACEF5 /* Landmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531F86742A8DBCF7006ACEF5 /* Landmark.swift */; };
 		531F86792A8DC25C006ACEF5 /* LandmarkListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531F86782A8DC25C006ACEF5 /* LandmarkListView.swift */; };
+		5376C6DE2A9121FD00883516 /* LandmarkSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5376C6DD2A9121FD00883516 /* LandmarkSheetView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +62,7 @@
 		531F86722A8DBB5F006ACEF5 /* LocalSearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalSearchService.swift; sourceTree = "<group>"; };
 		531F86742A8DBCF7006ACEF5 /* Landmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Landmark.swift; sourceTree = "<group>"; };
 		531F86782A8DC25C006ACEF5 /* LandmarkListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkListView.swift; sourceTree = "<group>"; };
+		5376C6DD2A9121FD00883516 /* LandmarkSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkSheetView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 				531F865A2A8C666B006ACEF5 /* RatingView.swift */,
 				531F86502A8C340C006ACEF5 /* ProfileStatsView.swift */,
 				531F86782A8DC25C006ACEF5 /* LandmarkListView.swift */,
+				5376C6DD2A9121FD00883516 /* LandmarkSheetView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 				531F86732A8DBB5F006ACEF5 /* LocalSearchService.swift in Sources */,
 				531F86792A8DC25C006ACEF5 /* LandmarkListView.swift in Sources */,
 				531F86592A8C64AB006ACEF5 /* LocationEditorSheet.swift in Sources */,
+				5376C6DE2A9121FD00883516 /* LandmarkSheetView.swift in Sources */,
 				531F86652A8DA1AB006ACEF5 /* MapSearchView.swift in Sources */,
 				531F861C2A8C0414006ACEF5 /* ChowliApp.swift in Sources */,
 				531F86512A8C340C006ACEF5 /* ProfileStatsView.swift in Sources */,

@@ -18,6 +18,7 @@ struct ProfileView: View {
                     .resizable()
                     .scaledToFit()
                     .frame(maxWidth: .infinity)
+                    .padding(50)
                 HStack {
                     ProfileStatsView()
                 }
