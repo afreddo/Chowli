@@ -41,7 +41,7 @@ struct ContentView: View {
                         
                 }
                     .tabItem {
-                        Label("My map", systemImage: "map.circle")
+                        Label("My Map", systemImage: "map.circle")
                     }
                 
                 MapSearchView()

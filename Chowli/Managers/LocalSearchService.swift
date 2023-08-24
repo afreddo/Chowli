@@ -27,6 +27,7 @@ class LocalSearchService: ObservableObject {
         let request = MKLocalSearch.Request()
         request.naturalLanguageQuery = query
         request.region = locationManager.region
+        request.pointOfInterestFilter = MKPointOfInterestFilter(including: [.restaurant, .cafe])
         
         let search = MKLocalSearch(request: request)
         search.start { response, error in

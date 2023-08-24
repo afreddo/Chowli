@@ -16,6 +16,7 @@ struct ChowliApp: App {
             ContentView()
                 .environment(\.managedObjectContext, dataController.container.viewContext)
                 .environmentObject(LocalSearchService())
+                .preferredColorScheme(.dark)
         }
     }
 }
