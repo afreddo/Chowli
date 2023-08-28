@@ -59,8 +59,9 @@ struct RestaurantsVisitedView: View {
                                 
                                 Spacer()
                                 
-                                RatingView(rating: .constant(Int(location.rating)))
-                                    .font(.title3)
+                                Text("\(location.rating)/5")
+                                Image(systemName: "star.fill")
+                                    .foregroundColor(Color.yellow)
                             }
                         }
                     }
