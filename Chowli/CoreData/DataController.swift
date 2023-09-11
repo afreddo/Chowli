@@ -20,4 +20,18 @@ class DataController: ObservableObject {
             self.container.viewContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
         }
     }
+    
+    func addLocation(name: String, lat: Double, long: Double, comments: String = "", rating: Int = 3, type: String, address: String) {
+
+        let cachedLocation = CachedLocation(context: container.viewContext)
+        cachedLocation.name = name
+        cachedLocation.lat = lat
+        cachedLocation.long = long
+        cachedLocation.comments = comments
+        cachedLocation.rating = Int16(rating)
+        cachedLocation.type = type
+        cachedLocation.address = address
+        
+        try? container.viewContext.save()
+    }
 }

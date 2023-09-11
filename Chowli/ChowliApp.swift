@@ -15,6 +15,7 @@ struct ChowliApp: App {
         WindowGroup {
             ContentView()
                 .environment(\.managedObjectContext, dataController.container.viewContext)
+                .environmentObject(dataController)
                 .environmentObject(LocalSearchService())
                 .preferredColorScheme(.dark)
         }
