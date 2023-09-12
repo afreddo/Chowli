@@ -34,4 +34,10 @@ class DataController: ObservableObject {
         
         try? container.viewContext.save()
     }
+    
+    func removeLocation(_ restaurant: CachedLocation) {
+        container.viewContext.delete(restaurant)
+        
+        try? container.viewContext.save()
+    }
 }

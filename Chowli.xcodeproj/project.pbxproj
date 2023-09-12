@@ -34,6 +34,7 @@
 		531F86792A8DC25C006ACEF5 /* LandmarkListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531F86782A8DC25C006ACEF5 /* LandmarkListView.swift */; };
 		5376C6DE2A9121FD00883516 /* LandmarkSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5376C6DD2A9121FD00883516 /* LandmarkSheetView.swift */; };
 		5392832E2AAFAE0900C8CF2C /* LocationEditorSheet-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5392832D2AAFAE0900C8CF2C /* LocationEditorSheet-ViewModel.swift */; };
+		539283302AB0BC7D00C8CF2C /* RestaurantDetailView-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5392832F2AB0BC7D00C8CF2C /* RestaurantDetailView-ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +66,7 @@
 		531F86782A8DC25C006ACEF5 /* LandmarkListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkListView.swift; sourceTree = "<group>"; };
 		5376C6DD2A9121FD00883516 /* LandmarkSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkSheetView.swift; sourceTree = "<group>"; };
 		5392832D2AAFAE0900C8CF2C /* LocationEditorSheet-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "LocationEditorSheet-ViewModel.swift"; path = "Chowli/ViewModel/LocationEditorSheet-ViewModel.swift"; sourceTree = SOURCE_ROOT; };
+		5392832F2AB0BC7D00C8CF2C /* RestaurantDetailView-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RestaurantDetailView-ViewModel.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +181,7 @@
 		5392832C2AAFAD2B00C8CF2C /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				5392832F2AB0BC7D00C8CF2C /* RestaurantDetailView-ViewModel.swift */,
 				5392832D2AAFAE0900C8CF2C /* LocationEditorSheet-ViewModel.swift */,
 			);
 			path = ViewModel;
@@ -255,6 +258,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				531F861E2A8C0414006ACEF5 /* ContentView.swift in Sources */,
+				539283302AB0BC7D00C8CF2C /* RestaurantDetailView-ViewModel.swift in Sources */,
 				531F86752A8DBCF7006ACEF5 /* Landmark.swift in Sources */,
 				531F864D2A8C2685006ACEF5 /* Profile.swift in Sources */,
 				531F86412A8C0CC7006ACEF5 /* Location.swift in Sources */,
