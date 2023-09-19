@@ -31,7 +31,6 @@
 		531F86712A8DB917006ACEF5 /* MKCoordinateRegion-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531F86702A8DB917006ACEF5 /* MKCoordinateRegion-Extension.swift */; };
 		531F86732A8DBB5F006ACEF5 /* LocalSearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531F86722A8DBB5F006ACEF5 /* LocalSearchService.swift */; };
 		531F86752A8DBCF7006ACEF5 /* Landmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531F86742A8DBCF7006ACEF5 /* Landmark.swift */; };
-		531F86792A8DC25C006ACEF5 /* LandmarkListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531F86782A8DC25C006ACEF5 /* LandmarkListView.swift */; };
 		5376C6DE2A9121FD00883516 /* LandmarkSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5376C6DD2A9121FD00883516 /* LandmarkSheetView.swift */; };
 		5392832E2AAFAE0900C8CF2C /* LocationEditorSheet-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5392832D2AAFAE0900C8CF2C /* LocationEditorSheet-ViewModel.swift */; };
 		539283302AB0BC7D00C8CF2C /* RestaurantDetailView-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5392832F2AB0BC7D00C8CF2C /* RestaurantDetailView-ViewModel.swift */; };
@@ -63,7 +62,6 @@
 		531F86702A8DB917006ACEF5 /* MKCoordinateRegion-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKCoordinateRegion-Extension.swift"; sourceTree = "<group>"; };
 		531F86722A8DBB5F006ACEF5 /* LocalSearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalSearchService.swift; sourceTree = "<group>"; };
 		531F86742A8DBCF7006ACEF5 /* Landmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Landmark.swift; sourceTree = "<group>"; };
-		531F86782A8DC25C006ACEF5 /* LandmarkListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkListView.swift; sourceTree = "<group>"; };
 		5376C6DD2A9121FD00883516 /* LandmarkSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkSheetView.swift; sourceTree = "<group>"; };
 		5392832D2AAFAE0900C8CF2C /* LocationEditorSheet-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "LocationEditorSheet-ViewModel.swift"; path = "Chowli/ViewModel/LocationEditorSheet-ViewModel.swift"; sourceTree = SOURCE_ROOT; };
 		5392832F2AB0BC7D00C8CF2C /* RestaurantDetailView-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RestaurantDetailView-ViewModel.swift"; sourceTree = "<group>"; };
@@ -132,7 +130,6 @@
 				531F864E2A8C3256006ACEF5 /* ProfileView.swift */,
 				531F865A2A8C666B006ACEF5 /* RatingView.swift */,
 				531F86502A8C340C006ACEF5 /* ProfileStatsView.swift */,
-				531F86782A8DC25C006ACEF5 /* LandmarkListView.swift */,
 				5376C6DD2A9121FD00883516 /* LandmarkSheetView.swift */,
 			);
 			path = View;
@@ -264,7 +261,6 @@
 				531F86412A8C0CC7006ACEF5 /* Location.swift in Sources */,
 				531F86552A8C3923006ACEF5 /* UserMapView.swift in Sources */,
 				531F86732A8DBB5F006ACEF5 /* LocalSearchService.swift in Sources */,
-				531F86792A8DC25C006ACEF5 /* LandmarkListView.swift in Sources */,
 				531F86592A8C64AB006ACEF5 /* LocationEditorSheet.swift in Sources */,
 				5376C6DE2A9121FD00883516 /* LandmarkSheetView.swift in Sources */,
 				531F86652A8DA1AB006ACEF5 /* MapSearchView.swift in Sources */,
