@@ -22,10 +22,6 @@ struct MapSearchView: View {
                     showLandmarkSheet.toggle()
                 }
                 .padding()
-            
-//            if !localSearchService.landmarks.isEmpty {
-//                LandmarkListView()
-//            }
             Map(coordinateRegion: $localSearchService.region, showsUserLocation: true, annotationItems: localSearchService.landmarks) { landmark in
                 MapAnnotation(coordinate: landmark.coordinate) {
                     Image(systemName: "fork.knife.circle")

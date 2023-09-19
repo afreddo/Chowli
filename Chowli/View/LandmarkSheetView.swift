@@ -10,6 +10,9 @@ import MapKit
 
 struct LandmarkSheetView: View {
     @EnvironmentObject var localSearchService: LocalSearchService
+    @State private var showingLocationEditorSheet = false
+    @State private var addedLocationName = ""
+    @State private var addedLocationAddress = ""
     
     var body: some View {
         VStack {
@@ -26,7 +29,25 @@ struct LandmarkSheetView: View {
                         localSearchService.region = MKCoordinateRegion.regionFromLandmark(landmark)
                     }
                 }
+                .swipeActions {
+                    Button("Add to My Locations") {
+                        showingLocationEditorSheet.toggle()
+                    }
+                    .tint(.green)
+                }
+                .contextMenu {
+                    Button {
+                        let pasteboard = UIPasteboard.general
+                        pasteboard.string = landmark.title
+                    } label: {
+                        Label("Copy to clipboard", systemImage: "doc.on.doc")
+                    }
+                }
+                .sheet(isPresented: $showingLocationEditorSheet) {
+                    LocationEditorSheet()
+                }
             }
+            
         }
     }
 }

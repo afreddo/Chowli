@@ -50,9 +50,3 @@ struct LocationEditorSheet: View {
         
     }
 }
-
-struct LocationEditorSheet_Previews: PreviewProvider {
-    static var previews: some View {
-        LocationEditorSheet()
-    }
-}

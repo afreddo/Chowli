@@ -30,7 +30,7 @@ class DataController: ObservableObject {
         cachedLocation.comments = comments
         cachedLocation.rating = Int16(rating)
         cachedLocation.type = type
-        cachedLocation.address = address
+        cachedLocation.address = address.uppercased()
         
         try? container.viewContext.save()
     }

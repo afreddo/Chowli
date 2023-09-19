@@ -32,7 +32,7 @@ struct ContentView: View {
                         .resizable()
                         .scaledToFit()
                         .foregroundColor(.secondary)
-                        .frame(maxWidth: 50)
+                        .frame(maxWidth: 75)
                         .shadow(radius: 1)
                         .offset(x: -20, y: -20)
                         .onTapGesture {
