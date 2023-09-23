@@ -37,13 +37,19 @@ struct RestaurantDetailView: View {
                             .resizable()
                             .scaledToFit()
                             .frame(maxWidth: .infinity)
-                        
+                                                    
                         Text("Credit: \(vm.getAuthor(for: restaurant))")
                             .foregroundColor(.white)
                             .padding(5)
                             .background(Color.secondary.opacity(0.8))
                             .clipShape(Capsule())
+                            .contextMenu {
+                                Link(destination: URL(string:  vm.authorLinks[restaurant.wrappedType] ??  "https://unsplash.com/")!) {
+                                    Text("Artist profile on Unsplash")
+                                }
+                            }
                             .offset(x: -30, y: -5)
+                            
                     }
                     
                     RatingView(rating: .constant(Int(restaurant.rating)))

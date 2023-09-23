@@ -11,6 +11,23 @@ extension RestaurantDetailView {
     @MainActor class ViewModel: ObservableObject {
         @Published var showDeleteConfirmation = false
         
+        var authorLinks: [String: String] = [
+        "American" : "https://unsplash.com/@mashkov",
+        "Mexican" : "https://unsplash.com/@spencerdavis",
+        "Barbecue" : "https://unsplash.com/@shootwithlou",
+        "Chinese" : "https://unsplash.com/@sj_unsplash",
+        "Thai" : "https://unsplash.com/@grimnoire",
+        "Indian" : "https://unsplash.com/@amir_v_ali",
+        "Brunch" : "https://unsplash.com/@cerachiuu",
+        "Steakhouse" : "https://unsplash.com/@nanxiwei",
+        "Italian" : "https://unsplash.com/@sorinpopa",
+        "Sushi" : "https://unsplash.com/@andrazlazic",
+        "Pizza" : "https://unsplash.com/@saahilkhatkhate",
+        "Seafood" : "https://unsplash.com/@ca_creative",
+        "Japanese" : "https://unsplash.com/@diegonacho",
+        "French" : "https://unsplash.com/@tunnuz",
+        "Other" : "https://unsplash.com/@lockandkey"
+        ]
         
         func removeRestaurant(_ restaurant: CachedLocation, dataController: DataController) {
             dataController.removeLocation(restaurant)
