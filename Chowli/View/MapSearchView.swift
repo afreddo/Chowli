@@ -22,6 +22,7 @@ struct MapSearchView: View {
             if localSearchService.landmarks.isEmpty {
                 TextField("Search", text: $search)
                     .textFieldStyle(.roundedBorder)
+                    .submitLabel(.search)
                     .onSubmit {
                         localSearchService.search(query: search)
                         showLandmarkSheet.toggle()
@@ -31,6 +32,7 @@ struct MapSearchView: View {
                 HStack {
                     TextField("Search", text: $search)
                         .textFieldStyle(.roundedBorder)
+                        .submitLabel(.search)
                         .onSubmit {
                             localSearchService.search(query: search)
                             showLandmarkSheet.toggle()

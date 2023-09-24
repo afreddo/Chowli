@@ -50,11 +50,21 @@ struct RestaurantsVisitedView: View {
                             RestaurantDetailView(restaurant: location)
                         } label: {
                             HStack {
-                                VStack {
-                                    Text(location.wrappedName)
-                                        .font(.headline)
-                                    Text(location.wrappedType)
-                                        .foregroundColor(.secondary)
+                                VStack(alignment: .leading) {
+                                    HStack {
+                                        Text(location.wrappedName)
+                                            .font(.headline)
+                                            .padding([.trailing], 10)
+                                        Text(location.wrappedType)
+                                            .font(.caption)
+                                            .foregroundStyle(.secondary)
+                                    }
+                                    HStack {
+                                        Text(location.wrappedAddress)
+                                            .font(.subheadline)
+                                            .foregroundStyle(.secondary)
+                                            .padding([.leading], 10)
+                                    }
                                 }
                                 
                                 Spacer()

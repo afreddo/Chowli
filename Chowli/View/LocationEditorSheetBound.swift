@@ -61,7 +61,9 @@ struct LocationEditorSheetBound: View {
             }
         }
         .navigationTitle("Add Restaurant")
-        
+        .onAppear {
+            convertAddress()
+        }
     }
     
     func addLocation(dataController: DataController) {
