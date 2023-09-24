@@ -9,37 +9,32 @@ import SwiftUI
 import MapKit
 
 struct MapSearchView: View {
-    @State private var search: String = ""
+    @StateObject private var vm = ViewModel()
     @EnvironmentObject var localSearchService: LocalSearchService
-    @State private var showLandmarkSheet = false
-    @State private var showingLocationEditorSheet = false
-    
-    @State private var selectedLocationName = ""
-    @State private var selectedLocationAddress = ""
     
     var body: some View {
         VStack {
             if localSearchService.landmarks.isEmpty {
-                TextField("Search", text: $search)
+                TextField("Search", text: $vm.search)
                     .textFieldStyle(.roundedBorder)
                     .submitLabel(.search)
                     .onSubmit {
-                        localSearchService.search(query: search)
-                        showLandmarkSheet.toggle()
+                        localSearchService.search(query: vm.search)
+                        vm.showLandmarkSheet.toggle()
                     }
                     .padding()
             } else {
                 HStack {
-                    TextField("Search", text: $search)
+                    TextField("Search", text: $vm.search)
                         .textFieldStyle(.roundedBorder)
                         .submitLabel(.search)
                         .onSubmit {
-                            localSearchService.search(query: search)
-                            showLandmarkSheet.toggle()
+                            localSearchService.search(query: vm.search)
+                            vm.showLandmarkSheet.toggle()
                         }
                     Button("Cancel", role: .cancel) {
                         localSearchService.resetUI()
-                        search = ""
+                        vm.search = ""
                     }
                 }
                 .padding()
@@ -57,15 +52,15 @@ struct MapSearchView: View {
                         .scaleEffect(localSearchService.landmark == landmark ? 2 : 1)
                         .onTapGesture {
                             localSearchService.landmark = landmark
-                            selectedLocationName = landmark.name
-                            selectedLocationAddress = landmark.title
+                            vm.selectedLocationName = landmark.name
+                            vm.selectedLocationAddress = landmark.title
                             withAnimation {
                                 localSearchService.region = MKCoordinateRegion.regionFromLandmark(landmark)
                             }
                         }
                         .contextMenu {
                             Button("Add to My Locations") {
-                                showingLocationEditorSheet.toggle()
+                                vm.showingLocationEditorSheet.toggle()
                             }
                         }
                     
@@ -86,15 +81,15 @@ struct MapSearchView: View {
                 }
             }
         }
-        .sheet(isPresented: $showLandmarkSheet) {
+        .sheet(isPresented: $vm.showLandmarkSheet) {
             LandmarkSheetView()
                 .presentationDetents([.fraction(0.33)])
                 .presentationBackgroundInteraction(
                     .enabled(upThrough: .large)
                 )
         }
-        .sheet(isPresented: $showingLocationEditorSheet) {
-            LocationEditorSheetBound(address: selectedLocationAddress, name: selectedLocationName)
+        .sheet(isPresented: $vm.showingLocationEditorSheet) {
+            LocationEditorSheetBound(address: vm.selectedLocationAddress, name: vm.selectedLocationName)
         }
         
     }
