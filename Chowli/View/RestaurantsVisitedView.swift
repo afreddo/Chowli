@@ -13,7 +13,6 @@ enum sortType {
 
 struct RestaurantsVisitedView: View {
     @Environment(\.managedObjectContext) var moc
-    @EnvironmentObject private var user: User
     @FetchRequest(sortDescriptors: []) var locations: FetchedResults<CachedLocation>
     
     @State private var filterType = "All"

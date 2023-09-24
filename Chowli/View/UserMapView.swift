@@ -9,7 +9,6 @@ import SwiftUI
 import MapKit
 
 struct UserMapView: View {
-    @EnvironmentObject private var user: User
     @FetchRequest(sortDescriptors: []) var locations: FetchedResults<CachedLocation>
     @State private var mapRegion: MKCoordinateRegion
     

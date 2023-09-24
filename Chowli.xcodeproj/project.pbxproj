@@ -13,14 +13,11 @@
 		531F86232A8C0415006ACEF5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 531F86222A8C0415006ACEF5 /* Preview Assets.xcassets */; };
 		531F862B2A8C0823006ACEF5 /* Chowli.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 531F86292A8C0823006ACEF5 /* Chowli.xcdatamodeld */; };
 		531F863D2A8C0BB4006ACEF5 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531F863C2A8C0BB4006ACEF5 /* DataController.swift */; };
-		531F863F2A8C0C93006ACEF5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531F863E2A8C0C93006ACEF5 /* User.swift */; };
 		531F86412A8C0CC7006ACEF5 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531F86402A8C0CC7006ACEF5 /* Location.swift */; };
 		531F86462A8C20C8006ACEF5 /* CachedLocation+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531F86442A8C20C8006ACEF5 /* CachedLocation+CoreDataClass.swift */; };
 		531F86472A8C20C8006ACEF5 /* CachedLocation+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531F86452A8C20C8006ACEF5 /* CachedLocation+CoreDataProperties.swift */; };
 		531F86492A8C221B006ACEF5 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531F86482A8C221B006ACEF5 /* DataManager.swift */; };
 		531F864D2A8C2685006ACEF5 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531F864C2A8C2685006ACEF5 /* Profile.swift */; };
-		531F864F2A8C3256006ACEF5 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531F864E2A8C3256006ACEF5 /* ProfileView.swift */; };
-		531F86512A8C340C006ACEF5 /* ProfileStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531F86502A8C340C006ACEF5 /* ProfileStatsView.swift */; };
 		531F86552A8C3923006ACEF5 /* UserMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531F86542A8C3923006ACEF5 /* UserMapView.swift */; };
 		531F86592A8C64AB006ACEF5 /* LocationEditorSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531F86582A8C64AB006ACEF5 /* LocationEditorSheet.swift */; };
 		531F865B2A8C666B006ACEF5 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531F865A2A8C666B006ACEF5 /* RatingView.swift */; };
@@ -45,14 +42,11 @@
 		531F86222A8C0415006ACEF5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		531F862A2A8C0823006ACEF5 /* Chowli.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Chowli.xcdatamodel; sourceTree = "<group>"; };
 		531F863C2A8C0BB4006ACEF5 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
-		531F863E2A8C0C93006ACEF5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		531F86402A8C0CC7006ACEF5 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		531F86442A8C20C8006ACEF5 /* CachedLocation+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CachedLocation+CoreDataClass.swift"; sourceTree = "<group>"; };
 		531F86452A8C20C8006ACEF5 /* CachedLocation+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CachedLocation+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		531F86482A8C221B006ACEF5 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		531F864C2A8C2685006ACEF5 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
-		531F864E2A8C3256006ACEF5 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
-		531F86502A8C340C006ACEF5 /* ProfileStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileStatsView.swift; sourceTree = "<group>"; };
 		531F86542A8C3923006ACEF5 /* UserMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMapView.swift; sourceTree = "<group>"; };
 		531F86582A8C64AB006ACEF5 /* LocationEditorSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationEditorSheet.swift; sourceTree = "<group>"; };
 		531F865A2A8C666B006ACEF5 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
@@ -130,9 +124,7 @@
 				531F86582A8C64AB006ACEF5 /* LocationEditorSheet.swift */,
 				538A922F2AC0A1D200EDE2D2 /* LocationEditorSheetBound.swift */,
 				531F86602A8C83E1006ACEF5 /* RestaurantDetailView.swift */,
-				531F864E2A8C3256006ACEF5 /* ProfileView.swift */,
 				531F865A2A8C666B006ACEF5 /* RatingView.swift */,
-				531F86502A8C340C006ACEF5 /* ProfileStatsView.swift */,
 				5376C6DD2A9121FD00883516 /* LandmarkSheetView.swift */,
 			);
 			path = View;
@@ -141,7 +133,6 @@
 		531F867C2A8FCA1F006ACEF5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				531F863E2A8C0C93006ACEF5 /* User.swift */,
 				531F864C2A8C2685006ACEF5 /* Profile.swift */,
 				531F86402A8C0CC7006ACEF5 /* Location.swift */,
 				531F86742A8DBCF7006ACEF5 /* Landmark.swift */,
@@ -269,8 +260,6 @@
 				531F86652A8DA1AB006ACEF5 /* MapSearchView.swift in Sources */,
 				5392832E2AAFAE0900C8CF2C /* LocationEditorSheet-ViewModel.swift in Sources */,
 				531F861C2A8C0414006ACEF5 /* ChowliApp.swift in Sources */,
-				531F86512A8C340C006ACEF5 /* ProfileStatsView.swift in Sources */,
-				531F863F2A8C0C93006ACEF5 /* User.swift in Sources */,
 				531F863D2A8C0BB4006ACEF5 /* DataController.swift in Sources */,
 				531F862B2A8C0823006ACEF5 /* Chowli.xcdatamodeld in Sources */,
 				531F86712A8DB917006ACEF5 /* MKCoordinateRegion-Extension.swift in Sources */,
@@ -280,7 +269,6 @@
 				531F86612A8C83E1006ACEF5 /* RestaurantDetailView.swift in Sources */,
 				531F86492A8C221B006ACEF5 /* DataManager.swift in Sources */,
 				538A92302AC0A1D200EDE2D2 /* LocationEditorSheetBound.swift in Sources */,
-				531F864F2A8C3256006ACEF5 /* ProfileView.swift in Sources */,
 				531F866F2A8DB795006ACEF5 /* LocationManager.swift in Sources */,
 				531F86462A8C20C8006ACEF5 /* CachedLocation+CoreDataClass.swift in Sources */,
 			);

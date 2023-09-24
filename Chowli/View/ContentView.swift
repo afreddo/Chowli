@@ -10,9 +10,6 @@ import MapKit
 
 struct ContentView: View {
     @Environment(\.managedObjectContext) var moc
-    @StateObject private var user = User()
-    @State private var showAddProfile = false
-    @State private var profileName = "New User"
     @State private var showingLocationEditorSheet = false
     @FetchRequest(sortDescriptors: []) var locations: FetchedResults<CachedLocation>
  
@@ -54,30 +51,6 @@ struct ContentView: View {
                         Label("My Locations", systemImage: "list.bullet.circle")
                     }
             }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    if user.profile.name == Profile.newProfile.name {
-                        Image(systemName: "person.crop.circle.badge.questionmark.fill")
-                            .onTapGesture {
-                                showAddProfile = true
-                            }
-                        
-                    } else {
-                        NavigationLink {
-                            ProfileView()
-                        } label: {
-                            Image(systemName: "person.circle")
-                        }
-                    }
-                }
-            }
-            .alert("Create Profile Name", isPresented: $showAddProfile) {
-                TextField("New User", text: $profileName)
-                Button("OK") { }
-            }
-            .onChange(of: profileName) { profileName in
-                user.changeName(name: profileName)
-            }
             .sheet(isPresented: $showingLocationEditorSheet) {
                 LocationEditorSheet()
                     .presentationDetents([.medium])
@@ -90,7 +63,6 @@ struct ContentView: View {
         .onAppear {
             UITabBar.appearance().scrollEdgeAppearance = UITabBarAppearance.init(idiom: .unspecified)
         }
-        .environmentObject(user)
     }
 }
 
