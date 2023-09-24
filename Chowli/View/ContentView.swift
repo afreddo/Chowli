@@ -87,6 +87,9 @@ struct ContentView: View {
             .font(.headline)
 
         }
+        .onAppear {
+            UITabBar.appearance().scrollEdgeAppearance = UITabBarAppearance.init(idiom: .unspecified)
+        }
         .environmentObject(user)
     }
 }
