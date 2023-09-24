@@ -14,6 +14,9 @@ struct LandmarkSheetView: View {
     @State private var addedLocationName = ""
     @State private var addedLocationAddress = ""
     
+    @State private var selectedLocationName = ""
+    @State private var selectedLocationAddress = ""
+    
     var body: some View {
         VStack {
             List(localSearchService.landmarks) { landmark in
@@ -31,7 +34,8 @@ struct LandmarkSheetView: View {
                 }
                 .swipeActions {
                     Button("Add to My Locations") {
-                        showingLocationEditorSheet.toggle()
+                        selectedLocationName = landmark.name
+                        selectedLocationAddress = landmark.title
                     }
                     .tint(.green)
                 }
@@ -44,10 +48,12 @@ struct LandmarkSheetView: View {
                     }
                 }
                 .sheet(isPresented: $showingLocationEditorSheet) {
-                    LocationEditorSheet()
+                    LocationEditorSheetBound(address: selectedLocationAddress, name: selectedLocationName)
                 }
             }
-            
+            .onChange(of: selectedLocationName) { _ in
+                showingLocationEditorSheet.toggle()
+            }
         }
     }
 }

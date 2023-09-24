@@ -12,16 +12,37 @@ struct MapSearchView: View {
     @State private var search: String = ""
     @EnvironmentObject var localSearchService: LocalSearchService
     @State private var showLandmarkSheet = false
+    @State private var showingLocationEditorSheet = false
+    
+    @State private var selectedLocationName = ""
+    @State private var selectedLocationAddress = ""
     
     var body: some View {
         VStack {
-            TextField("Search", text: $search)
-                .textFieldStyle(.roundedBorder)
-                .onSubmit {
-                    localSearchService.search(query: search)
-                    showLandmarkSheet.toggle()
+            if localSearchService.landmarks.isEmpty {
+                TextField("Search", text: $search)
+                    .textFieldStyle(.roundedBorder)
+                    .onSubmit {
+                        localSearchService.search(query: search)
+                        showLandmarkSheet.toggle()
+                    }
+                    .padding()
+            } else {
+                HStack {
+                    TextField("Search", text: $search)
+                        .textFieldStyle(.roundedBorder)
+                        .onSubmit {
+                            localSearchService.search(query: search)
+                            showLandmarkSheet.toggle()
+                        }
+                    Button("Cancel", role: .cancel) {
+                        localSearchService.resetUI()
+                        search = ""
+                    }
                 }
                 .padding()
+            }
+                
             Map(coordinateRegion: $localSearchService.region, showsUserLocation: true, annotationItems: localSearchService.landmarks) { landmark in
                 MapAnnotation(coordinate: landmark.coordinate) {
                     Image(systemName: "fork.knife.circle")
@@ -32,12 +53,33 @@ struct MapSearchView: View {
                         .shadow(color: .black, radius: 1)
                         .foregroundColor(localSearchService.landmark == landmark ? .green : .red)
                         .scaleEffect(localSearchService.landmark == landmark ? 2 : 1)
+                        .onTapGesture {
+                            localSearchService.landmark = landmark
+                            selectedLocationName = landmark.name
+                            selectedLocationAddress = landmark.title
+                            withAnimation {
+                                localSearchService.region = MKCoordinateRegion.regionFromLandmark(landmark)
+                            }
+                        }
+                        .contextMenu {
+                            Button("Add to My Locations") {
+                                showingLocationEditorSheet.toggle()
+                            }
+                        }
                     
                     if localSearchService.landmark == landmark {
-                        Text(landmark.name)
-                            .fixedSize()
-                            .foregroundColor(.green)
-                            .shadow(color: .black, radius: 1)
+                        VStack {
+                            Text(landmark.name)
+                                .font(.headline)
+                                .fixedSize()
+                                .foregroundColor(.green)
+                                .shadow(color: .black, radius: 1)
+                            Text(landmark.title)
+                                .font(.subheadline)
+                                .fixedSize()
+                                .foregroundColor(.green)
+                                .shadow(color: .black, radius: 1)
+                        }
                     }
                 }
             }
@@ -48,6 +90,9 @@ struct MapSearchView: View {
                 .presentationBackgroundInteraction(
                     .enabled(upThrough: .large)
                 )
+        }
+        .sheet(isPresented: $showingLocationEditorSheet) {
+            LocationEditorSheetBound(address: selectedLocationAddress, name: selectedLocationName)
         }
         
     }

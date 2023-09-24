@@ -40,4 +40,8 @@ class LocalSearchService: ObservableObject {
         }
         
     }
+    
+    func resetUI() {
+        self.landmarks = []
+    }
 }
